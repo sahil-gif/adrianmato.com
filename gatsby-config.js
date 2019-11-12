@@ -3,7 +3,8 @@ module.exports = {
     title: `Adrián Mato`,
     title_default: `Adrián Mato — Product Designer in San Francisco`,
     description: `Designing and building tools for developers at GitHub.`,
-    author: `@adrianmg`
+    author: `@adrianmg`,
+    twitterUsername: `@adrianmg`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -14,6 +15,8 @@ module.exports = {
         path: `${__dirname}/src/images`
       }
     },
+    `gatsby-plugin-emotion`,
+    // TODO: see if we need this for lazy loading images
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -22,7 +25,6 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        // TODO: see what to do here
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
