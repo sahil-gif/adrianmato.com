@@ -1,15 +1,23 @@
 /**
- * Main layout with basic styles
+ * Main layout
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-import "normalize.css/normalize.css";
+import React from 'react'
+import PropTypes from 'prop-types'
+import theme from '../theme/theme.js'
+import { ThemeProvider } from 'emotion-theming'
 
-const Layout = ({ children }) => <>{children}</>;
+const Layout = props => {
+  return (
+    <ThemeProvider theme={theme}>
+      <main>{props.children}</main>
+    </ThemeProvider>
+  )
+}
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
-};
+  children: PropTypes.node.isRequired,
+  theme: PropTypes.string,
+}
 
-export default Layout;
+export default Layout

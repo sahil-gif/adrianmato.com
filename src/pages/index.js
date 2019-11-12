@@ -1,22 +1,25 @@
-import React from "react";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+/**
+ * Homepage of the website
+ */
+
+import React from 'react'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import styled from '@emotion/styled'
 
 // styled components
 const Title = styled.h1`
-  color: red;
-`;
-const Subtitle = styled.h2``;
-const Bio = styled.p``;
+  color: ${props => props.theme.colors.primary};
+`
+const Subtitle = styled.h2``
+const Bio = styled.p``
 
 const IndexPage = () => (
-  <Layout>
-    <SEO />
+  <Layout theme="cocoa">
+    <SEO title="false" />
     <Title>Adrián Mato</Title>
     <Subtitle>
-      Designing <span class="ampersand">&amp;</span> building tools for
+      Designing <span className="ampersand">&amp;</span> building tools for
       developers at GitHub.
     </Subtitle>
     <Bio>
@@ -30,6 +33,6 @@ const IndexPage = () => (
       products that fulfill a clear purpose.
     </Bio>
   </Layout>
-);
+)
 
-export default IndexPage;
+export default IndexPage
