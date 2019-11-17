@@ -1,0 +1,24 @@
+:root {
+  --color-gold: rgba(255, 184, 122, 1);
+  --color-white: rgba(242, 243, 251, 1);
+  --color-gray: rgba(145, 145, 161, 1);
+  --color-black: rgba(18, 18, 26, 1);
+  --color-purple: rgba(156, 164, 225, 1);
+
+  --time-transition-00: 0.1s;
+  --time-transition-01: 0.2s;
+  --time-transition-02: 0.25s;
+
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-serif: 'EB Garamond', serif;
+  --font-weight: 400;
+  --font-line-height: 1;
+  --font-size: 2.3rem;
+  --font-size-body: 1.6rem;
+  --font-size-small: calc(var(--base-font-size) * 0.875);
+
+  --textPrimary: var(--color-white);
+  --textSecondary: var(--color-gray);
+  --textSmall: calc(var(--base-font-size) * 0.875);
+  --background: var(--color-gray-dark);
+}

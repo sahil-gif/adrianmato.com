@@ -4,15 +4,12 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import theme from '../theme/theme.js'
-import { ThemeProvider } from 'emotion-theming'
+import 'normalize.css'
+import '../styles/variables.css'
+
 
 const Layout = props => {
-  return (
-    <ThemeProvider theme={theme}>
-      <main>{props.children}</main>
-    </ThemeProvider>
-  )
+  return <main>{props.children}</main>
 }
 
 Layout.propTypes = {
