@@ -9,9 +9,13 @@ import styled from '@emotion/styled'
 
 // styled components
 const Title = styled.h1`
-  color: ${props => props.theme.colors.primary};
+  color: var(--textTitle);
+  font-weight: bolder;
 `
-const Subtitle = styled.h2``
+const Subtitle = styled.h2`
+  color: var(--brandingColor);
+  font-family: var(--font-serif);
+`
 const Bio = styled.p``
 
 const IndexPage = () => (
