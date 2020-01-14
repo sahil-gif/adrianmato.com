@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "id": "pipelines",
+      "title": "Microsoft: Azure Pipelines",
+      "subtitle": "Lead & Design Manager (2018 – 2019)",
+      "description": "Leading a team of 5 designers through a major redesign of a 12 years old enterprise product. A new product vision in the CI/CD space for software developers based on a single pipeline experience using YAML."
+    },
+    {
+      "id": "yammer",
+      "title": "Yammer",
+      "subtitle": "",
+      "description": ""
+    }
+  ]
+}
