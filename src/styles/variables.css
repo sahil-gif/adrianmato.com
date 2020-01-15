@@ -5,30 +5,29 @@
   --color-black: rgba(18, 18, 26, 1);
   --color-purple: rgba(156, 164, 225, 1);
 
-  --textPrimary: var(--color-gray);
-  --textSecondary: var(--color-gray);
-  --textTitle: var(--color-white);
-  --textSelectionBackground: var(--color-purple);
-  --brandingColor: var(--color-gold);
-  --background: var(--color-black);
+  --body-background: var(--color-black);
 
+  --text-primary: var(--color-gray);
+  --text-secondary: var(--color-gray);
+  --text-title: var(--color-white);
+  --text-selection: var(--color-purple);
+  --text-branding: var(--color-gold);
+  
   --spacer-0: 0;
-  --spacer-4: 0.4rem;
-  --spacer-8: 0.8rem;
-  --spacer-12: 1.2rem;
-  --spacer-16: 1.6rem;
-  --spacer-20: 2rem;
-  --spacer-24: 2.4rem;
-  --spacer-32: 3.2rem;
-  --spacer-40: 4rem;
-  --spacer-48: 4.8rem;
-  --spacer-56: 5.6rem;
-  --spacer-64: 6.4rem;
-  --spacer-72: 7.2rem;
+  --spacer-1: 0.4rem;
+  --spacer-2: 0.8rem;
+  --spacer-3: 1.2rem;
+  --spacer-4: 1.6rem;
+  --spacer-5: 2.0rem;
+  --spacer-6: 2.4rem;
+  --spacer-7: 2.8rem;
+  --spacer-8: 3.2rem;
+  --spacer-9: 3.6rem;
+  --spacer-10: 4.0rem;
 
-  --time-transition-00: 0.1s;
-  --time-transition-01: 0.2s;
-  --time-transition-02: 0.25s;
+  --time-transition-fast: 0.1s;
+  --time-transition-regular: 0.2s;
+  --time-transition-slow: 0.25s;
 
   --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     'Droid Sans', 'Helvetica Neue', sans-serif;
