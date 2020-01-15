@@ -1,22 +1,23 @@
-/**
- * Homepage of the website
- */
+import React from "react"
+import styled from "@emotion/styled"
+import { Link } from "gatsby"
 
-import React from 'react'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import styled from '@emotion/styled'
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+
 
 // styled components
 const Title = styled.h1`
-  color: var(--textTitle);
+  color: var(--text-title);
   font-weight: bolder;
 `
 const Subtitle = styled.h2`
-  color: var(--brandingColor);
+  color: var(--text-branding);
   font-family: var(--font-serif);
 `
 const Bio = styled.p``
+
+const Navigation = styled.nav``
 
 const IndexPage = () => (
   <Layout theme="cocoa">
@@ -36,6 +37,16 @@ const IndexPage = () => (
       true passion was Design. I love combining both skillsets to create
       products that fulfill a clear purpose.
     </Bio>
+    <Navigation>
+      <ul>
+        <li><a href="#home-work">Portfolio</a></li>
+        <li><Link to="/blog">Blog</Link></li>
+        <li><a href="https://linkedin.com/in/adrianmg">Resume</a></li>
+        <li><a href="https://github.com/adrianmg">GitHub</a></li>
+        <li><a href="https://twitter.com/adrianmg">Twitter</a></li>
+        <li><a href="mailto:hello@adrianmato.com">Contact</a></li>
+      </ul>
+    </Navigation>
   </Layout>
 )
 

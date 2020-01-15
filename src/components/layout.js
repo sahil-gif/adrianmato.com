@@ -1,7 +1,3 @@
-/**
- * Main layout
- */
-
 import React from 'react'
 import { Global, css } from '@emotion/core'
 import 'normalize.css'
@@ -13,8 +9,8 @@ const globalStyles = css({
   },
   html: {
     fontSize: 'var(--font-size-reset)',
-    color: 'var(--textPrimary)',
-    backgroundColor: 'var(--background)',
+    color: 'var(--text-primary)',
+    backgroundColor: 'var(--body-background)',
   },
   body: {
     padding: 'var(--spacer-56)',
@@ -28,19 +24,19 @@ const globalStyles = css({
   },
   'h1, h2, h3, h4, h5, h6': {
     fontWeight: 'var(--font-weight)',
-    color: 'var(--textTitle)',
+    color: 'var(--text-title)',
     margin: '0 0 1.2em',
   },
   img: {
     maxWidth: '100%',
   },
   '::selection': {
-    color: 'var(--textTitle)',
-    background: 'var(--textSelection)',
+    color: 'var(--text-title)',
+    background: 'var(--text-selection)',
   },
   '::-moz-selection': {
-    color: 'var(--textTitle)',
-    background: 'var(--textSelection)',
+    color: 'var(--text-title)',
+    background: 'var(--text-selection)',
   },
   '.ampersand': {
     fontFamily: 'Baskerville, "EB Garamond", serif',
