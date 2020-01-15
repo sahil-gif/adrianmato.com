@@ -20,7 +20,7 @@ const Bio = styled.p``
 const Navigation = styled.nav``
 
 const IndexPage = () => (
-  <Layout theme="cocoa">
+  <Layout theme="">
     <SEO title="false" />
     <Title>Adrián Mato</Title>
     <Subtitle>
