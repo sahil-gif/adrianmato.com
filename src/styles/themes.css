@@ -1,9 +1,9 @@
 :root {
-  --color-gold: rgba(255, 184, 122, 1);
-  --color-white: rgba(242, 243, 251, 1);
-  --color-gray: rgba(145, 145, 161, 1);
-  --color-black: rgba(18, 18, 26, 1);
-  --color-purple: rgba(156, 164, 225, 1);
+  --color-gold:   #ffb87a;
+  --color-white:  #f2f3fb;
+  --color-gray:   #9191a1;
+  --color-black:  #12121a;
+  --color-purple: #9ca4e1;
 
   --body-background: var(--color-black);
 
@@ -12,22 +12,6 @@
   --text-title: var(--color-white);
   --text-selection: var(--color-purple);
   --text-branding: var(--color-gold);
-  
-  --spacer-0: 0;
-  --spacer-1: 0.4rem;
-  --spacer-2: 0.8rem;
-  --spacer-3: 1.2rem;
-  --spacer-4: 1.6rem;
-  --spacer-5: 2.0rem;
-  --spacer-6: 2.4rem;
-  --spacer-7: 2.8rem;
-  --spacer-8: 3.2rem;
-  --spacer-9: 3.6rem;
-  --spacer-10: 4.0rem;
-
-  --time-transition-fast: 0.1s;
-  --time-transition-regular: 0.2s;
-  --time-transition-slow: 0.25s;
 
   --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -36,8 +20,12 @@
   --font-line-height: 1.4;
   --font-size-reset: 62.5%;
   --font-size: 1.6rem;
+
+  --time-transition-fast: 0.1s;
+  --time-transition-regular: 0.2s;
+  --time-transition-slow: 0.25s;
 }
 
 body.dark {
-  --text-title: var(--color-gold); 
+  --text-title: var(--color-gold);
 }

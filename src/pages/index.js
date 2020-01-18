@@ -37,8 +37,10 @@ const IndexPage = () => (
       true passion was Design. I love combining both skillsets to create
       products that fulfill a clear purpose.
     </Bio>
+    {/* TODO: Put this inside a component? */}
     <Navigation>
       <ul>
+      {/* TODO: grab values from configuration of the site */}
         <li><a href="#home-work">Portfolio</a></li>
         <li><Link to="/blog">Blog</Link></li>
         <li><a href="https://linkedin.com/in/adrianmg">Resume</a></li>
