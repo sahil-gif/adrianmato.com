@@ -1,0 +1,164 @@
+@import 'normalize.css';
+@import 'themes.css';
+
+/**
+ * Reset some basic elements
+ */
+ * { padding: 0; margin: 0; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+ html { font-size: 62.5%; }
+ 
+ body, h1, h2, h3, h4, h5, h6,
+ p, blockquote, pre, hr,
+ dl, dd, ol, ul, figure {
+   margin: 0;
+   padding: 0;
+ }
+ 
+ 
+ /**
+  * Basic styling
+  */
+ body {
+   font: var(--base-font-weight) var(--base-font-size) var(--base-font-family);
+   color: var(--text-color);
+   background-color: var(--background-color);
+   -webkit-text-size-adjust: 100%;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-feature-settings: "kern" 1;
+      -moz-font-feature-settings: "kern" 1;
+        -o-font-feature-settings: "kern" 1;
+           font-feature-settings: "kern" 1;
+   font-kerning: normal;
+   scroll-behavior: smooth;
+ }
+ 
+ 
+ /**
+  * Text selection
+  */
+ ::selection {
+   color: var(--title-color);
+   background: var(--strong-color);
+ }
+ ::-moz-selection {
+   color: var(--title-color);
+   background: var(--strong-color);
+ }
+ 
+ 
+ /**
+  * Fonts
+  */
+ %font-xl { // H1
+   font-size: 3.8rem;
+   line-height: 4.8rem;
+   font-weight: 600;
+ }
+ 
+ %font-l { // H2
+   font-size: 2.4rem;
+   line-height: 3.2rem;
+ }
+ 
+ %font-body {
+   font-size: 1.6rem;
+   line-height: 2.4rem;
+ }
+ 
+ %font-s {
+   font-size: 1.4rem;
+   line-height: 2.0rem;
+ }
+ 
+ %font-xs {
+   font-size: 1.2rem;
+   line-height: 2.4rem;
+ }
+ 
+ 
+ /**
+  * Set `margin-bottom` to maintain vertical rhythm
+  */
+ h1, h2, h3, h4, h5, h6,
+ p, blockquote, pre,
+ ul, ol, dl, figure,
+ %vertical-rhythm {
+   margin-bottom: .4rem;
+ }
+ 
+ 
+ /**
+  * Headers
+  */
+ h1, h2, h3 {
+   color: var(--title-color);
+   font-weight: 400;
+ }
+ 
+ 
+ /**
+  * Lists
+  */
+ ul{
+   list-style-type: none;
+   list-style-position: inside;
+ }
+ 
+ 
+ /**
+  * Links
+  */
+ a {
+   color: var(--brand-color);
+   text-decoration: none;
+   -webkit-transition: none;
+           transition: none;
+ 
+   &:visited {
+     color: var(--brand-color);
+   }
+ 
+   &:hover {
+     color: var(--text-color);
+     text-decoration: underline;
+   }
+ }
+ 
+ 
+ /**
+  * Clearfix
+  */
+ %clearfix:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+ 
+ 
+ /**
+  * Helpers
+  */
+ 
+  .h-absolute {
+   position: absolute;
+  }
+ 
+  .h-padleft {
+   padding-left: var(--base-padding);
+  }
+ 
+  .ampersand {
+    font-family: 'Baskerville', "EB Garamond", serif;
+    font-style: italic;
+    font-size: 80%;
+  }
+ 
+ %h-divider {
+   border-bottom: .5px dotted rgba($color: var(--text-color), $alpha: .15);
+ }
+ 
+ .h-bradius {
+   border-radius: .1rem;
+ }
