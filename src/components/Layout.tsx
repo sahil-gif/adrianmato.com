@@ -4,6 +4,7 @@ import { Side, padding, margin } from '../styles/utils';
 import 'normalize.css';
 import '../styles/themes.css';
 
+//@ts-ignore
 const globalStyles = css({
   html: {
     height: '100%',
@@ -20,7 +21,7 @@ const globalStyles = css({
     ...margin(0, Side.Top),
     color: 'var(--text-primary)',
     font: 'var(--font-weight) var(--font-size) / var(--font-line-height) var(--font-family)',
-    WebkitTextSizeAdjust: '100%',
+    textSizeAdjust: '100%',
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
     FontFeatureSettings: '"kern" 1',
@@ -36,6 +37,9 @@ const globalStyles = css({
   'p, blockquote, pre, code, del, img, ol, ul, li, label, table' : {
     padding: 0,
     margin: 0,
+  },
+  a: {
+    color: 'inherit',
   },
   img: {
     maxWidth: '100%',
@@ -55,11 +59,19 @@ const globalStyles = css({
   },
 });
 
-const Layout = ({ children }) => (
-  <div class="dark">
+export interface LayoutProps {
+  children?: JSX.Element[];
+  theme?: string;
+}
+
+// function SEO({ description, lang, meta, title }: SEOProps) {
+
+const Layout = ({ children, theme }: LayoutProps) => (
+  <>
     <Global styles={globalStyles} />
     {children}
-  </div>
+    {theme}
+  </>
 )
 
 export default Layout

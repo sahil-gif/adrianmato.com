@@ -2,7 +2,7 @@ const BASE = 4; // rhythm
 const UNITS = 'rem';
 const FONT_RESET = 10; // due to CSS fontSize reset using rem
 
-function createRhythm(amount) {
+function createRhythm(amount: number) {
   return amount * BASE / FONT_RESET;
 }
 
@@ -15,7 +15,7 @@ export const Side = {
   Left : 'left'
 };
 
-export function padding(amount, side) {
+export function padding(amount: number, side?: string) {
   const ryhthm = `${createRhythm(amount)}${UNITS}`;
 
   return {
@@ -29,7 +29,7 @@ export function padding(amount, side) {
   };
 }
 
-export function margin(amount, side) {
+export function margin(amount: number, side: string) {
   const ryhthm = `${createRhythm(amount)}${UNITS}`;
 
   return {

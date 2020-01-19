@@ -2,8 +2,8 @@ import React from "react"
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 
 const Title = styled.h1`
@@ -12,7 +12,7 @@ const Title = styled.h1`
 `
 
 const BlogPage = () => (
-  <Layout theme="">
+  <Layout>
     <SEO title="Blog" />
     <Title>Blog</Title>
     <Link to="/">Go back to Homepage</Link>
