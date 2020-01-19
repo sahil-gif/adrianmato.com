@@ -1,10 +1,5 @@
-/**
- * Portfolio of projects
- * mainly used in the homepage
- */
-
-import React from 'react'
-import styled from '@emotion/styled'
+import React from 'react';
+import styled from '@emotion/styled';
 
 // styles
 const ProjectTitle = styled.h2`

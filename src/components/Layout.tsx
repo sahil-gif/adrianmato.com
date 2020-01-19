@@ -74,4 +74,4 @@ const Layout = ({ children, theme }: LayoutProps) => (
   </>
 )
 
-export default Layout
+export default Layout;
