@@ -23,4 +23,4 @@ const BlogPage = () => (
   </Layout>
 )
 
-export default BlogPage
+export default BlogPage;
