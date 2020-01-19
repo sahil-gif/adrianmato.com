@@ -39,5 +39,7 @@
     "prettier": "^1.19.1",
     "typescript": "^3.7.5"
   },
-  "lint:css": "stylelint './src/*.js'"
+  "resolutions": {
+    "babel-plugin-emotion": "<=10.0.12"
+  }
 }
