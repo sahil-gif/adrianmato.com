@@ -1,10 +1,9 @@
 // TODO: Review what dependencies are needed or not in `package.json`
-import React from "react"
-import styled from "@emotion/styled"
-import { Link } from "gatsby"
-
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import React from "react";
+import styled from "@emotion/styled";
+import { Link } from "gatsby";
+import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
 
 // styled components
