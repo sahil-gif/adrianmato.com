@@ -9,7 +9,7 @@
     "**/node_modules": true,
     "**/public": true
   },
-  "editor.rulers": [96],
+  "editor.rulers": [80],
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
