@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
 export interface SEOProps {
   description?: string;
   lang: string;
-  meta: { name: string, content: string }[];
+  meta: { name: string; content: string }[];
   title: string;
 }
 
@@ -24,12 +24,12 @@ function SEO({ description, lang, meta, title }: SEOProps) {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
   title = title
     ? site.siteMetadata.title_default
-    : `${site.siteMetadata.title} — ${title}`
+    : `${site.siteMetadata.title} — ${title}`;
 
   return (
     <Helmet
@@ -73,20 +73,20 @@ function SEO({ description, lang, meta, title }: SEOProps) {
         },
       ].concat(meta)}
     />
-  )
+  );
 }
 
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string,
-}
+};
 
 export default SEO;

@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 const ProjectTitle = styled.h2`
   color: var(--textTitle);
   font-weight: bolder;
-`
+`;
 
 const Portfolio = () => (
   <>
@@ -28,6 +28,6 @@ const Portfolio = () => (
       </figure>
     </div>
   </>
-)
+);
 
-export default Portfolio
+export default Portfolio;

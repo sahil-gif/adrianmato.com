@@ -4,7 +4,6 @@ import { Side, padding, margin } from '../styles/utils';
 import 'normalize.css';
 import '../styles/themes.css';
 
-//@ts-ignore
 const globalStyles = css({
   html: {
     height: '100%',
@@ -20,7 +19,8 @@ const globalStyles = css({
     ...padding(14),
     ...margin(0, Side.Top),
     color: 'var(--text-primary)',
-    font: 'var(--font-weight) var(--font-size) / var(--font-line-height) var(--font-family)',
+    font:
+      'normal var(--font-size) / var(--font-line-height) var(--font-family)',
     textSizeAdjust: '100%',
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
@@ -29,14 +29,14 @@ const globalStyles = css({
     scrollBehavior: 'smooth',
   },
   'h1, h2, h3, h4, h5, h6': {
-    fontWeight: 'var(--font-weight)',
+    fontWeight: 'normal',
     color: 'var(--text-title)',
     margin: '0',
     padding: '0',
   },
-  'p, blockquote, pre, code, del, img, ol, ul, li, label, table' : {
-    padding: 0,
-    margin: 0,
+  'p, blockquote, pre, code, del, img, ol, ul, li, label, table': {
+    padding: '0',
+    margin: '0',
   },
   a: {
     color: 'inherit',
@@ -72,6 +72,6 @@ const Layout = ({ children, theme }: LayoutProps) => (
     {children}
     {theme}
   </>
-)
+);
 
 export default Layout;

@@ -1,8 +1,8 @@
 :root {
-  --color-gold:   #ffb87a;
-  --color-white:  #f2f3fb;
-  --color-gray:   #9191a1;
-  --color-black:  #12121a;
+  --color-gold: #ffb87a;
+  --color-white: #f2f3fb;
+  --color-gray: #9191a1;
+  --color-black: #12121a;
   --color-purple: #9ca4e1;
 
   --body-background: var(--color-black);
@@ -16,7 +16,6 @@
   --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     'Droid Sans', 'Helvetica Neue', sans-serif;
   --font-serif: 'EB Garamond', serif;
-  --font-weight: 400;
   --font-line-height: 1.4;
   --font-size-reset: 62.5%;
   --font-size: 1.6rem;
