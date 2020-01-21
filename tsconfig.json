@@ -16,6 +16,9 @@
     ]
   },
   "exclude": [
-    "**/*.ssr.ts"
+    "**/*.ssr.ts",
+    "node_modules",
+    ".cache",
+    "public"
   ]
 }
