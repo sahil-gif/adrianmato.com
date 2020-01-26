@@ -10,6 +10,7 @@ export interface SEOProps {
   title: string;
 }
 
+// BUG: custom title doesn't render on pages
 function SEO({ description, lang, meta, title }: SEOProps) {
   const { site } = useStaticQuery(
     graphql`
@@ -17,7 +18,7 @@ function SEO({ description, lang, meta, title }: SEOProps) {
         site {
           siteMetadata {
             title
-            title_default
+            titleDefault
             description
             author
           }
@@ -28,7 +29,7 @@ function SEO({ description, lang, meta, title }: SEOProps) {
 
   const metaDescription = description || site.siteMetadata.description;
   title = title
-    ? site.siteMetadata.title_default
+    ? site.siteMetadata.titleDefault
     : `${site.siteMetadata.title} — ${title}`;
 
   return (
