@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Adrián Mato`,
-    titleDefault: `Adrián Mato — Product Designer in San Francisco`,
-    description: `Designing and building tools for developers at GitHub.`,
-    author: `@adrianmg`,
-    twitterUsername: `@adrianmg`,
+    title: 'Adrián Mato',
+    titleDefault: 'Adrián Mato — Product Designer in San Francisco',
+    description: 'Designing and building tools for developers at GitHub.',
+    author: 'adrianmg',
+    email: 'hello@adrianmato.com',
+    social: 'adrianmg',
   },
   plugins: [
     'gatsby-plugin-typescript',
