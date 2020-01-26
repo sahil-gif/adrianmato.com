@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Adrián Mato`,
-    title_default: `Adrián Mato — Product Designer in San Francisco`,
+    titleDefault: `Adrián Mato — Product Designer in San Francisco`,
     description: `Designing and building tools for developers at GitHub.`,
     author: `@adrianmg`,
-    twitterUsername: `@adrianmg`
+    twitterUsername: `@adrianmg`,
   },
   plugins: [
     'gatsby-plugin-typescript',
@@ -14,8 +14,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     `gatsby-plugin-emotion`,
     // TODO: see if we need this for lazy loading images
@@ -30,8 +30,8 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png` // This path is relative to the root of the site.
-      }
-    }
-  ]
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
+  ],
 };
