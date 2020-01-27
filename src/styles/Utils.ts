@@ -1,6 +1,7 @@
 const BASE = 4; // rhythm
-const UNITS = 'rem';
 const FONT_RESET = 10; // due to CSS fontSize reset using rem
+// eslint-disable-next-line @typescript-eslint/no-inferrable-types
+export const UNITS: string = 'rem';
 
 function createRhythm(amount: number) {
   return (amount * BASE) / FONT_RESET;
@@ -16,37 +17,47 @@ export const Side = {
 };
 
 export function padding(amount: number, side?: string) {
-  const ryhthm = `${createRhythm(amount)}${UNITS}`;
+  const rhythm = `${createRhythm(amount)}${UNITS}`;
 
   return {
-    ...(side === Side.Top ? { paddingTop: ryhthm } : undefined),
-    ...(side === Side.Right ? { paddingRight: ryhthm } : undefined),
-    ...(side === Side.Bottom ? { paddingBottom: ryhthm } : undefined),
-    ...(side === Side.Left ? { paddingLeft: ryhthm } : undefined),
-    ...(!side ? { padding: ryhthm } : undefined),
+    ...(side === Side.Top ? { paddingTop: rhythm } : undefined),
+    ...(side === Side.Right ? { paddingRight: rhythm } : undefined),
+    ...(side === Side.Bottom ? { paddingBottom: rhythm } : undefined),
+    ...(side === Side.Left ? { paddingLeft: rhythm } : undefined),
+    ...(!side ? { padding: rhythm } : undefined),
     ...(side === Side.Vertical
-      ? { paddingTop: ryhthm, paddingBottom: ryhthm }
+      ? { paddingTop: rhythm, paddingBottom: rhythm }
       : undefined),
     ...(side === Side.Horizontal
-      ? { paddingLeft: ryhthm, paddingRight: ryhthm }
+      ? { paddingLeft: rhythm, paddingRight: rhythm }
       : undefined),
   };
 }
 
 export function margin(amount: number, side: string) {
-  const ryhthm = `${createRhythm(amount)}${UNITS}`;
+  const rhythm = `${createRhythm(amount)}${UNITS}`;
 
   return {
-    ...(side === Side.Top ? { marginTop: ryhthm } : undefined),
-    ...(side === Side.Right ? { marginRight: ryhthm } : undefined),
-    ...(side === Side.Bottom ? { marginBottom: ryhthm } : undefined),
-    ...(side === Side.Left ? { marginLeft: ryhthm } : undefined),
-    ...(!side ? { margin: ryhthm } : undefined),
+    ...(side === Side.Top ? { marginTop: rhythm } : undefined),
+    ...(side === Side.Right ? { marginRight: rhythm } : undefined),
+    ...(side === Side.Bottom ? { marginBottom: rhythm } : undefined),
+    ...(side === Side.Left ? { marginLeft: rhythm } : undefined),
+    ...(!side ? { margin: rhythm } : undefined),
     ...(side === Side.Vertical
-      ? { marginTop: ryhthm, marginBottom: ryhthm }
+      ? { marginTop: rhythm, marginBottom: rhythm }
       : undefined),
     ...(side === Side.Horizontal
-      ? { marginLeft: ryhthm, marginRight: ryhthm }
+      ? { marginLeft: rhythm, marginRight: rhythm }
       : undefined),
   };
+}
+
+export function lineHeight(amount: number) {
+  const rhythm = `${createRhythm(amount)}${UNITS}`;
+  return { ...{ lineHeight: rhythm } };
+}
+
+export function left(amount: number) {
+  const rhythm = `${createRhythm(amount)}${UNITS}`;
+  return { ...{ left: rhythm } };
 }
