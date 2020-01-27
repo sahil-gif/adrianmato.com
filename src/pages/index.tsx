@@ -5,17 +5,39 @@ import styled from '@emotion/styled';
 import Layout from '../components/Layout';
 import Navigation from '../components/IndexNavigation';
 import SEO from '../components/SEO';
+import { lineHeight, margin, Side } from '../styles/Utils';
 
-// styled components
+// TODO: I'm not sure if it's worth using styled for such simple parts… it's more clear but also more verbose
+// TODO: Arrow pointing down
+const BioContainer = styled.div`
+  min-height: 89vh;
+  display: flex;
+  align-items: center;
+`;
+const Bio = styled.div`
+  max-width: 66rem;
+  bottom: 1.5vh;
+  position: relative;
+  ${lineHeight(6)};
+`;
 const Title = styled.h1`
   color: var(--text-title);
-  font-weight: bolder;
+  font-size: var(--font-size-l);
+  ${lineHeight(12)};
+  font-weight: var(--text-semibold);
+  margin-bottom: 0.6rem;
 `;
 const Subtitle = styled.h2`
+  margin-bottom: 2.2rem;
   color: var(--text-branding);
+  font-size: var(--font-size-m);
   font-family: var(--font-serif);
+  ${lineHeight(8)};
 `;
-const Bio = styled.p``;
+const Description = styled.p`
+  ${margin(4.5, Side.Bottom)}
+  ${lineHeight(7)};
+`;
 
 export interface IndexPageProps {
   data: {
@@ -34,26 +56,31 @@ export interface IndexPageProps {
 const IndexPage = ({ data }: IndexPageProps) => {
   const view = data.site.siteMetadata;
   return (
-    <Layout theme="">
+    <Layout theme="caca">
       <SEO
         title={view.titleDefault ? view.titleDefault : view.title}
         description={view.description}
       />
-      <Title>{view.title}</Title>
-      <Subtitle>
-        Designing <span className="ampersand">&amp;</span> building tools for
-        developers at GitHub.
-      </Subtitle>
-      <Bio>
-        For the last 12+ years, I&apos;ve designed digital products between
-        Madrid, London and now, from San Francisco. I also co-founded and later
-        sold my company Erasmusu.
-      </Bio>
-      <Bio>
-        My career started as a Software Developer but it soon became clear that
-        my true passion was Design. I love combining both skillsets to create
-        products that fulfill a clear purpose.
-      </Bio>
+
+      <BioContainer>
+        <Bio>
+          <Title>{view.title}</Title>
+          <Subtitle>
+            Designing <span className="ampersand">&amp;</span> building tools
+            for developers at GitHub.
+          </Subtitle>
+          <Description>
+            For the last 12+ years, I&apos;ve designed digital products between
+            Madrid, London and now, from San Francisco. I also co-founded and
+            later sold my company Erasmusu.
+          </Description>
+          <Description>
+            My career started as a Software Developer but it soon became clear
+            that my true passion was Design. I love combining both skillsets to
+            create products that fulfill a clear purpose.
+          </Description>
+        </Bio>
+      </BioContainer>
       <Navigation social={view.social} email={view.email} />
 
       <div id="work"></div>

@@ -16,11 +16,11 @@ const globalStyles = css({
     backgroundColor: 'var(--body-background)',
   },
   body: {
-    ...padding(14),
+    ...padding(14, Side.Horizontal),
     ...margin(0, Side.Top),
     color: 'var(--text-primary)',
     font:
-      'normal var(--font-size) / var(--font-line-height) var(--font-family)',
+      'normal var(--font-size-regular) / var(--font-line-height) var(--font-family)',
     textSizeAdjust: '100%',
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
@@ -40,6 +40,7 @@ const globalStyles = css({
   },
   a: {
     color: 'inherit',
+    textDecoration: 'none',
   },
   img: {
     maxWidth: '100%',
@@ -66,11 +67,11 @@ export interface LayoutProps {
 
 // function SEO({ description, lang, meta, title }: SEOProps) {
 
-const Layout = ({ children, theme }: LayoutProps) => (
+const Layout = ({ children }: LayoutProps) => (
   <>
     <Global styles={globalStyles} />
-    {children}
-    {theme}
+    <div css={{ maxWidth: 'var(--layout-width)' }}>{children}</div>
+    {/* {theme} TODO: do we want to bring 'theme as a prop for something here? */}
   </>
 );
 
