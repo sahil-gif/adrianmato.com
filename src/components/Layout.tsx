@@ -1,7 +1,6 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
 import { Side, padding, margin } from '../styles/utils';
-// import 'normalize.css';
 import '../styles/themes.css';
 import '../styles/fonts/fonts.css';
 
