@@ -18,6 +18,12 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
     `gatsby-plugin-emotion`,
     // TODO: see if we need this for lazy loading images
     `gatsby-transformer-sharp`,

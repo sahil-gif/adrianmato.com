@@ -1,14 +1,14 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
-import { Side, padding, margin } from '../styles/Utils';
-import 'normalize.css';
+import { Side, padding, margin } from '../styles/utils';
+// import 'normalize.css';
 import '../styles/themes.css';
+import '../styles/fonts/fonts.css';
 
 const globalStyles = css({
   html: {
     height: '100%',
     minHeight: '100%',
-    fontSize: 'var(--font-size-reset)',
     WebkitFontSmoothing: 'antialiased',
     fontKerning: 'normal',
     fontFeatureSettings: '"kern", "liga", "clig", "calt",',
@@ -16,29 +16,15 @@ const globalStyles = css({
   'body, #___gatsby, #___gatsby > *': {
     minHeight: '100%',
     backgroundColor: 'var(--body-background)',
+    fontSize: 'var(--font-size-base)',
   },
   body: {
     ...padding(14, Side.Horizontal),
     ...margin(0, Side.Top),
     color: 'var(--text-primary)',
-    font:
-      'normal var(--font-size-regular) / var(--font-line-height) var(--font-family)',
-    textSizeAdjust: '100%',
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
-    FontFeatureSettings: '"kern" 1',
-    fontKerning: 'normal',
     scrollBehavior: 'smooth',
-  },
-  'h1, h2, h3, h4, h5, h6': {
-    fontWeight: 'normal',
-    color: 'var(--text-title)',
-    margin: '0',
-    padding: '0',
-  },
-  'p, blockquote, pre, code, del, img, ol, ul, li, label, table': {
-    padding: '0',
-    margin: '0',
   },
   a: {
     color: 'inherit',
@@ -55,6 +41,7 @@ const globalStyles = css({
     color: 'var(--text-title)',
     background: 'var(--text-selection)',
   },
+  // TODO: refactor as we did we serif generator
   '.ampersand': {
     fontFamily: 'Baskerville, "EB Garamond", serif',
     fontStyle: 'italic',

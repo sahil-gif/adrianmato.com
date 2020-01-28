@@ -1,8 +1,11 @@
+import { fontSerifFamily, fontSemibold } from '../utils/typography';
+import { ObjectInterpolation } from '@emotion/core';
+
 const BASE = 4; // rhythm
 const FONT_RESET = 10; // due to CSS fontSize reset using rem
-// eslint-disable-next-line @typescript-eslint/no-inferrable-types
-export const UNITS: string = 'rem';
+export const UNITS = 'rem';
 
+// TODO: do we need this? Can we re-use the rhythm creator from Typography?
 function createRhythm(amount: number) {
   return (amount * BASE) / FONT_RESET;
 }
@@ -61,3 +64,13 @@ export function left(amount: number) {
   const rhythm = `${createRhythm(amount)}${UNITS}`;
   return { ...{ left: rhythm } };
 }
+
+const serif: ObjectInterpolation<any> = {
+  fontFamily: fontSerifFamily.join(', '),
+};
+
+const semibold: ObjectInterpolation<any> = {
+  fontWeight: fontSemibold,
+};
+
+export const type = { serif, semibold };

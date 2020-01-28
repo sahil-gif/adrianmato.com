@@ -5,10 +5,13 @@ import styled from '@emotion/styled';
 import Layout from '../components/Layout';
 import Navigation from '../components/IndexNavigation';
 import SEO from '../components/SEO';
-import { lineHeight, margin, Side } from '../styles/Utils';
+import { lineHeight, margin, Side, type } from '../styles/utils';
 
 // TODO: I'm not sure if it's worth using styled for such simple parts… it's more clear but also more verbose
 // TODO: Arrow pointing down
+// TODO: Convert to `em` all the text margins
+// TODO: Add manifest https://www.gatsbyjs.org/tutorial/part-eight/#add-a-manifest-file
+
 const BioContainer = styled.div`
   min-height: 89vh;
   display: flex;
@@ -22,16 +25,16 @@ const Bio = styled.div`
 `;
 const Title = styled.h1`
   color: var(--text-title);
-  font-size: var(--font-size-l);
+  font-size: 3.8rem;
   ${lineHeight(12)};
-  font-weight: var(--text-semibold);
   margin-bottom: 0.6rem;
 `;
 const Subtitle = styled.h2`
   margin-bottom: 2.2rem;
   color: var(--text-branding);
   font-size: var(--font-size-m);
-  font-family: var(--font-serif);
+  font-weight: normal;
+  ${type.serif};
   ${lineHeight(8)};
 `;
 const Description = styled.p`
@@ -56,7 +59,7 @@ export interface IndexPageProps {
 const IndexPage = ({ data }: IndexPageProps) => {
   const view = data.site.siteMetadata;
   return (
-    <Layout theme="caca">
+    <Layout theme="">
       <SEO
         title={view.titleDefault ? view.titleDefault : view.title}
         description={view.description}
@@ -65,6 +68,8 @@ const IndexPage = ({ data }: IndexPageProps) => {
       <BioContainer>
         <Bio>
           <Title>{view.title}</Title>
+          {/* TODO: Fix rendering differences against adrianmato.com */}
+          {/* <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'></link> */}
           <Subtitle>
             Designing <span className="ampersand">&amp;</span> building tools
             for developers at GitHub.

@@ -16,13 +16,7 @@
   /* BUG: currently can't be accessed from emotion due to interpolation error */
   --text-semibold: 600;
 
-  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-    'Droid Sans', 'Helvetica Neue', sans-serif;
-  --font-serif: 'EB Garamond', serif;
-  --font-line-height: 1.4;
-  --font-size-reset: 62.5%;
-
-  --font-size-regular: 1.6rem;
+  --font-size-base: 1.6rem;
   --font-size-s: 1.2rem;
   --font-size-m: 2.4rem;
   --font-size-l: 3.8rem;

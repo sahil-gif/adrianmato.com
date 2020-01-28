@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
-import { padding, Side, lineHeight, left } from '../styles/Utils';
+import { padding, Side, lineHeight, left, type } from '../styles/utils';
 // import { padding, Side, lineHeight } from '../styles/Utils';
 
 const Navigation = styled.nav`
@@ -14,7 +14,7 @@ const List = styled.ul`
   position: relative;
   ${left(-3.5)};
   ${lineHeight(7)};
-  font-weight: var(--text-semibold);
+  ${type.semibold};
   font-size: var(--font-size-s);
   text-transform: uppercase;
   list-style-type: none;
