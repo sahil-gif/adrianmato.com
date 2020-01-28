@@ -10,6 +10,8 @@ const globalStyles = css({
     minHeight: '100%',
     fontSize: 'var(--font-size-reset)',
     WebkitFontSmoothing: 'antialiased',
+    fontKerning: 'normal',
+    fontFeatureSettings: '"kern", "liga", "clig", "calt",',
   },
   'body, #___gatsby, #___gatsby > *': {
     minHeight: '100%',
@@ -70,7 +72,9 @@ export interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => (
   <>
     <Global styles={globalStyles} />
-    <div css={{ maxWidth: 'var(--layout-width)' }}>{children}</div>
+    <div css={{ maxWidth: 'var(--layout-width)', margin: '0 auto' }}>
+      {children}
+    </div>
     {/* {theme} TODO: do we want to bring 'theme as a prop for something here? */}
   </>
 );
