@@ -1,13 +1,13 @@
 import Typography from 'typography';
 
+export const fontSemibold = 600;
+export const fontSerifFamily = ['EB Garamond', 'Georgia', 'serif'];
 export const fontBaseFamily = [
   '-apple-system',
   'BlinkMacSystemFont',
   'Segoe UI',
   'Roboto',
 ];
-export const fontSerifFamily = ['EB Garamond', 'Georgia', 'serif'];
-export const fontSemibold = 600;
 
 const typography = new Typography({
   baseFontSize: '10px',
