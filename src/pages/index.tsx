@@ -69,8 +69,6 @@ const IndexPage = ({ data }: IndexPageProps) => {
       <BioContainer>
         <Bio>
           <Title>{view.title}</Title>
-          {/* TODO: Fix rendering differences against adrianmato.com */}
-          {/* <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'></link> */}
           <Subtitle>
             Designing <span className="ampersand">&amp;</span> building tools
             for developers at GitHub.
