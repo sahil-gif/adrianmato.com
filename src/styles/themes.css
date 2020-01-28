@@ -13,8 +13,6 @@
   --text-title: var(--color-white);
   --text-selection: var(--color-purple);
   --text-branding: var(--color-gold);
-  /* BUG: currently can't be accessed from emotion due to interpolation error */
-  --text-semibold: 600;
 
   --font-size-base: 1.6rem;
   --font-size-s: 1.2rem;
