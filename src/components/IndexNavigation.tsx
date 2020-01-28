@@ -32,20 +32,6 @@ const navLinkStyles = css([
   },
 ]);
 
-// const styles = css({
-//   // ul: { background: 'red' },
-//   a: {
-//     color: 'red',
-//     ...padding(24, Side.Horizontal),
-//   },
-// });
-
-// const globalStyles = css({
-//   ul: {
-//     backgroundColor: 'blue',
-//   },
-// });
-
 export interface IndexNavigationProps {
   social: string;
   email: string;
@@ -54,41 +40,7 @@ export interface IndexNavigationProps {
 const IndexNavigation = ({ social, email }: IndexNavigationProps) => (
   <>
     <Navigation>
-      <List
-      // css={{
-      //   ...lineHeight(7),
-      //   fontWeight: 600,
-      //   textTransform: 'uppercase',
-      //   // position: 'relative',
-      //   // left: '-1.4rem',
-      //   margin: '0 auto',
-      // }}
-      // css={{
-      //   position: 'relative',
-      //   margin: '0 auto',
-      //   ...lineHeight(7),
-      //   fontWeight: 'var(--text-semibold)',
-      //   textTransform: 'uppercase',
-      //   left: '-1.4rem',
-
-      //   // display: 'flex',
-      //   // flexDirection: 'column',
-      //   // justifyContent: 'space-between',
-      //   // height: '100%',
-      //   // maxWidth: 760,
-      //   // margin: '0 auto',
-      // }}
-      >
-        {/* <ul
-        css={{
-          // ...lineHeight(7),
-          position: 'relative',
-          margin: '0 auto',
-          fontWeight: 'var(--text-semibold)',
-          textTransform: 'uppercase',
-          left: '-1.4rem',
-        }}
-      > */}
+      <List>
         <li>
           {/* TODO: anchor to work section */}
           <a css={navLinkStyles} href="#work">
