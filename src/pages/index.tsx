@@ -11,6 +11,7 @@ import { lineHeight, margin, Side, type } from '../styles/utils';
 // TODO: Arrow pointing down
 // TODO: Convert to `em` all the text margins
 // TODO: Add manifest https://www.gatsbyjs.org/tutorial/part-eight/#add-a-manifest-file
+// TODO: review unmet dependencies and fix them (babel)
 
 const BioContainer = styled.div`
   min-height: 89vh;
